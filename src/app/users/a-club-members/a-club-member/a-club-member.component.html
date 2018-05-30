@@ -1,0 +1,42 @@
+<form #aClubMemberForm="ngForm" (ngSubmit)="onSubmit(aClubMemberForm)">
+	<input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.$key">
+	<div class="form-group">
+		<label>Name</label>
+		<input class="form-control" name="name" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.name" placeholder="Full Name" required>
+	</div>
+	
+	<div class="form-group">		
+		<label>Index No</label>
+		<input class="form-control" name="indexNo" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.indexNo" placeholder="Index No" required>
+    </div>
+	<div class="form-group">
+		<label>Reg No</label>
+		<input class="form-control" name="regNo" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.regNo" placeholder="regNo" required>
+	</div>
+    
+	<div class="form-group">
+		<label>NIC</label>
+		<input class="form-control" name="nic" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.nic" placeholder="NIC" required>
+	</div>
+	<div class="form-group">
+		<label>Telephone</label>
+		<input class="form-control" name="telephone" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.telephone" placeholder="Telephone" required>
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input class="form-control" name="email" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.email" placeholder="Email" required>
+	</div>
+	<div class="form-group">
+		<label>Position</label>
+		<input class="form-control" name="position" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.positions" placeholder="NIC" required>
+	</div>
+	<div class="form-group">
+		<label>Sport</label>
+		<input class="form-control" name="sport" #name="ngModel" [(ngModel)]="aClubMemberService.selectedAClubMember.sport" placeholder="Sport" required>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-default" [disabled]="!aClubMemberForm">Submit</button>
+	</div>
+	
+
+</form>

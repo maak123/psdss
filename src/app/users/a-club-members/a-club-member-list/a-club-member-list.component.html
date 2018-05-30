@@ -1,0 +1,17 @@
+<h6 class="text-center">Amalgamated Club Member Register</h6><br/>
+<table class="table table-sm table-hover"  >
+  <tr *ngFor="let aClubMember of aClubMemberList">
+      <td>{{aClubMember.name}}</td>
+      <td>{{aClubMember.sport}}</td>
+      <td>{{aClubMember.positions}}</td>
+      
+      <td>
+        <a class="btn" (click)="onEdit(aClubMember)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(aClubMember.$key)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+  </tr>
+</table>
